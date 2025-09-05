@@ -5,8 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { useUI } from "./UIProvider";
 
 export default function Header() {
+  const { openConnect, openSign, openWrongNetwork } = useUI();
   return (
     <AppBar position="sticky" color="transparent" elevation={0} sx={{ backdropFilter: "blur(6px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: { xs: 2, md: 4 } }}>
@@ -21,16 +23,22 @@ export default function Header() {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-          <Box component="nav" sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box component="nav" sx={{ display: 'none', gap: 3 }}>
             <Link href="/">Home</Link>
             <Link href="/explore">Explore</Link>
             <Link href="/create">Create</Link>
             <Link href="/tokens/pepe">Tokens</Link>
           </Box>
 
-          <Button variant="contained" color="primary" sx={{ minWidth: 84, borderRadius: 2, px: 3, fontWeight: 700 }}>
-            Connect Wallet
+          <Button onClick={openConnect} variant="contained" color="primary" sx={{ minWidth: 84, borderRadius: 2, px: 3, fontWeight: 700 }}>
+            Connect
+          </Button>
+          <Button onClick={openSign} variant="outlined" sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
+            Sign
+          </Button>
+          <Button onClick={openWrongNetwork} variant="outlined" sx={{ display: { xs: 'none', md: 'inline-flex' } }}>
+            Wrong Net
           </Button>
 
           <Box

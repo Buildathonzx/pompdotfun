@@ -4,6 +4,8 @@ import { useMemo, PropsWithChildren } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import UIProvider from "./UIProvider";
+
 export default function Providers({ children }: PropsWithChildren<Record<string, unknown>>) {
   const theme = useMemo(() =>
     createTheme({
@@ -20,7 +22,9 @@ export default function Providers({ children }: PropsWithChildren<Record<string,
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {children}
+      <UIProvider>
+        {children}
+      </UIProvider>
     </ThemeProvider>
   );
 }

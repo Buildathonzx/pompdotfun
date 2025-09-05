@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "../components/Providers";
-import Header from "../components/Header";
+import AppShell from "../components/AppShell";
 
 export const metadata: Metadata = {
   title: "pompdafun",
@@ -33,10 +33,9 @@ export default function RootLayout({
         minHeight: '100vh',
       }}>
         <Providers>
-          <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <Header />
-            <main style={{ flex: 1 }}>{children}</main>
-          </div>
+          <AppShell>
+            {children}
+          </AppShell>
         </Providers>
       </body>
     </html>
