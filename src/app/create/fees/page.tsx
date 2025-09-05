@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import GlassCard from "@/components/GlassCard";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function FeesStep() {
   return (
@@ -42,8 +44,8 @@ export default function FeesStep() {
             </Box>
 
             <Box sx={{ mt: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <Button component={Link} href="/create/curve" variant="outlined" startIcon={<span className="material-symbols-outlined">arrow_back</span>}>Back</Button>
-              <Button component={Link} href="/create/preview" variant="contained" color="primary" endIcon={<span className="material-symbols-outlined">arrow_forward</span>}>Next</Button>
+              <Button component={Link} href="/create/curve" variant="outlined" startIcon={<ArrowBackIcon />}>Back</Button>
+              <Button component={Link} href="/create/preview" variant="contained" color="primary" endIcon={<ArrowForwardIcon />}>Next</Button>
             </Box>
           </Box>
         </GlassCard>

@@ -2,6 +2,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import GlassCard from "../../components/GlassCard";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import DrawIcon from "@mui/icons-material/Draw";
 
 export default function SignPage() {
   return (
@@ -16,7 +18,7 @@ export default function SignPage() {
           <Box sx={{ p: 4, textAlign: 'center' }}>
             <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
               <Box sx={{ borderRadius: '50%', bgcolor: 'rgba(167,77,255,0.12)', p: 1.5, border: '1px solid rgba(167,77,255,0.12)' }}>
-                <span className="material-symbols-outlined" style={{ color: 'rgba(167,77,255,0.8)', fontSize: 32 }}>wallet</span>
+                <AccountBalanceWalletIcon sx={{ color: 'rgba(167,77,255,0.8)', fontSize: 32 }} />
               </Box>
             </Box>
 
@@ -27,8 +29,8 @@ export default function SignPage() {
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Button variant="contained" color="primary" sx={{ py: 1.5, fontWeight: 700 }}>
-                <span className="material-symbols-outlined" style={{ marginRight: 8 }}>draw</span>
-                Sign &amp; Continue
+                 <DrawIcon sx={{ mr: 1 }} />
+                 Sign &amp; Continue
               </Button>
               <Typography variant="caption" sx={{ color: 'text.secondary' }}>This does not cost any gas fees.</Typography>
             </Box>

@@ -1,49 +1,43 @@
 import Link from "next/link";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import GlassCard from "@/components/GlassCard";
 
 export default function MetadataStep() {
   return (
-    <div className="px-40 flex flex-1 justify-center py-10">
-      <div className="flex flex-col w-[560px] max-w-[560px] py-5 flex-1">
-        <div className="flex flex-wrap gap-2 p-4 items-center">
-          <Link className="text-[#ab9db9] hover:text-white transition-colors text-sm font-medium" href="/create">Create Token</Link>
-          <span className="text-[#ab9db9] text-sm font-medium">/</span>
-          <span className="text-white text-sm font-medium">Metadata</span>
-        </div>
-        <div className="bg-[#1c1822] rounded-2xl p-8 border border-solid border-[#302839]/80 shadow-2xl shadow-[#8013ec]/10">
-          <h2 className="text-white tracking-tight text-[32px] font-bold pb-2">Create Token Metadata</h2>
-          <p className="text-[#ab9db9] text-base mb-8">Fill in the details for your new meme token.</p>
-          <form className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="text-white text-base font-medium" htmlFor="token-name">Name</label>
-              <input className="form-input" id="token-name" placeholder="e.g. Pepe Coin" />
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="text-white text-base font-medium" htmlFor="token-symbol">Symbol</label>
-                <input className="form-input" id="token-symbol" placeholder="e.g. PEPE" />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-white text-base font-medium" htmlFor="token-decimals">Decimals</label>
-                <input className="form-input" id="token-decimals" placeholder="e.g. 18" type="number" />
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-white text-base font-medium" htmlFor="token-image-url">Image URL</label>
-              <input className="form-input" id="token-image-url" placeholder="https://example.com/image.png" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-white text-base font-medium" htmlFor="token-description">Description</label>
-              <textarea className="form-input min-h-36" id="token-description" placeholder="A brief description of your token..." />
-            </div>
-            <div className="flex pt-4 justify-end">
-              <Link href="/create/curve" className="flex min-w-[120px] items-center justify-center rounded-lg h-12 px-6 bg-[var(--primary-color)] hover:bg-opacity-90 transition-all text-white font-bold gap-2 group">
-                <span>Next Step</span>
-                <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-              </Link>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', py: 6, px: 2 }}>
+      <Box sx={{ width: '100%', maxWidth: 720 }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 1, mb: 2 }}>
+          <Typography component={Link} href="/create" sx={{ color: 'text.secondary', fontSize: 13 }}>Create Token</Typography>
+          <Typography sx={{ color: 'text.secondary', fontSize: 13 }}>/</Typography>
+          <Typography sx={{ color: 'text.primary', fontSize: 13 }}>Metadata</Typography>
+        </Box>
+
+        <GlassCard>
+          <Box sx={{ p: 3 }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>Create Token Metadata</Typography>
+            <Typography sx={{ color: 'text.secondary', mb: 3 }}>Fill in the details for your new meme token.</Typography>
+
+            <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <TextField id="token-name" label="Name" placeholder="e.g. Pepe Coin" fullWidth />
+
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 2 }}>
+                <TextField id="token-symbol" label="Symbol" placeholder="e.g. PEPE" fullWidth />
+                <TextField id="token-decimals" type="number" label="Decimals" placeholder="e.g. 18" fullWidth />
+              </Box>
+
+              <TextField id="token-image-url" label="Image URL" placeholder="https://example.com/image.png" fullWidth />
+              <TextField id="token-description" label="Description" placeholder="A brief description of your token..." fullWidth multiline minRows={4} />
+
+              <Box sx={{ display: 'flex', justifyContent: 'flex-end', pt: 2 }}>
+                <Button component={Link} href="/create/curve" variant="contained" color="primary">Next Step</Button>
+              </Box>
+            </Box>
+          </Box>
+        </GlassCard>
+      </Box>
+    </Box>
   );
 }

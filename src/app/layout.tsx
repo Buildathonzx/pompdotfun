@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "../components/Providers";
+import Header from "../components/Header";
 
 export const metadata: Metadata = {
   title: "pompdafun",
@@ -21,10 +22,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
+
         <style>{`:root{--primary-color:#8013ec}`}</style>
       </head>
       <body style={{
@@ -35,7 +33,10 @@ export default function RootLayout({
         minHeight: '100vh',
       }}>
         <Providers>
-          {children}
+          <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+            <Header />
+            <main style={{ flex: 1 }}>{children}</main>
+          </div>
         </Providers>
       </body>
     </html>

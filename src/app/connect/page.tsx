@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import GlassCard from "../../components/GlassCard";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const wallets = [
   { name: "OKX Wallet", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtnv0Br4uSE03pRWyxmpPObyCXGc_NOoaKd7X3lXDG6wBlTPLbcwYFaaSK5doNjCJjDgymZR_wOmZXgg6NwcszW5j1AEs4ETZqbHs-Dkdl5NOmDGGdX73FDlMHAI2EPeZ-hOucnYSN06Ksi9pCSUMjLxa0FX3AH8DeK62mICPtszcdFYQGCN0s5X2V0dMfu0XQm1HAD5z7p8d4fH0kIitNrXuMGiz6fatCbnWeURzwt4QnhzP75I-Umgj18gemucuPm4ddazfAeEA" },
@@ -30,7 +31,7 @@ export default function ConnectPage() {
                     <Avatar src={w.img} alt={w.name} sx={{ width: 44, height: 44 }} />
                     <Typography sx={{ fontWeight: 600 }}>{w.name}</Typography>
                   </Box>
-                  <span className="material-symbols-outlined" style={{ color: 'rgba(255,255,255,0.6)' }}>chevron_right</span>
+                  <ChevronRightIcon sx={{ color: 'rgba(255,255,255,0.6)' }} />
                 </Button>
               ))}
             </Stack>

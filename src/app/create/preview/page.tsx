@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import GlassCard from "@/components/GlassCard";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
 export default function PreviewStep() {
   return (
@@ -35,7 +36,7 @@ export default function PreviewStep() {
             </Box>
 
             <Box sx={{ mt: 3, pt: 2, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-              <Button component={Link} href="/create/launch" variant="contained" color="primary" fullWidth startIcon={<span className="material-symbols-outlined">rocket_launch</span>}>
+              <Button component={Link} href="/create/launch" variant="contained" color="primary" fullWidth startIcon={<RocketLaunchIcon />}>
                 Confirm Launch
               </Button>
             </Box>
