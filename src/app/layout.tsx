@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import theme from "../theme";
+import Providers from "../components/Providers";
 
 export const metadata: Metadata = {
   title: "pompdafun",
@@ -36,10 +34,9 @@ export default function RootLayout({
         color: '#fff',
         minHeight: '100vh',
       }}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+        <Providers>
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );}
