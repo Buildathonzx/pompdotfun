@@ -1,19 +1,26 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import GlassCard from "../../components/GlassCard";
+
 export default function WrongNetworkPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#141118] text-white p-4">
-      <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-lg">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-yellow-500/20 bg-yellow-500/10 text-yellow-400">
-            <span className="material-symbols-outlined text-4xl">warning</span>
-          </div>
-          <h2 className="text-2xl font-bold">Wrong Network</h2>
-          <p className="mt-2 text-base text-gray-400">Your wallet is connected to an unsupported network. Please switch to the X Layer network to proceed.</p>
-          <button className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--primary-color)] py-3 px-4 text-sm font-semibold text-white hover:bg-opacity-80 active:scale-95">
-            <span className="material-symbols-outlined">swap_horiz</span>
-            Switch Network
-          </button>
-        </div>
-      </div>
-    </div>
+    <Box sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', p: 4 }}>
+      <Box sx={{ width: '100%', maxWidth: 520 }}>
+        <GlassCard>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', p: 3 }}>
+            <Box sx={{ mb: 2, width: 64, height: 64, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', border: '1px solid rgba(255,210,0,0.12)', bgcolor: 'rgba(255,210,0,0.08)', color: 'warning.main' }}>
+              <span className="material-symbols-outlined" style={{ fontSize: 28 }}>warning</span>
+            </Box>
+            <Typography variant="h6" sx={{ fontWeight: 700 }}>Wrong Network</Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>Your wallet is connected to an unsupported network. Please switch to the X Layer network to proceed.</Typography>
+            <Button variant="contained" color="primary" sx={{ mt: 3 }}>
+              <span className="material-symbols-outlined" style={{ marginRight: 8 }}>swap_horiz</span>
+              Switch Network
+            </Button>
+          </Box>
+        </GlassCard>
+      </Box>
+    </Box>
   );
 }
