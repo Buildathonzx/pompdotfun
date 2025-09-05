@@ -21,7 +21,7 @@ export default function CurveStep() {
           </Box>
 
           <Typography variant="h4" sx={{ fontWeight: 800, mb: 2 }}>Bonding Curve</Typography>
-          <Typography sx={{ color: 'text.secondary', mb: 3 }}>Define your token's economic model. This curve determines the price of your token based on its supply.</Typography>
+          <Typography sx={{ color: 'text.secondary', mb: 3 }}>Define your token&apos;s economic model. This curve determines the price of your token based on its supply.</Typography>
 
           <Box sx={{ maxWidth: 420, display: 'flex', flexDirection: 'column', gap: 2 }}>
             <FormControl>
