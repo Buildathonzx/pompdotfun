@@ -11,7 +11,7 @@ export default function CurveStep() {
             <span className="text-white text-sm font-medium">Bonding Curve</span>
           </div>
           <h1 className="text-white text-4xl font-bold tracking-tight mb-3">Bonding Curve</h1>
-          <p className="text-[#ab9db9] text-base leading-relaxed mb-10">Define your token's economic model. This curve determines the price of your token based on its supply.</p>
+          <p className="text-[#ab9db9] text-base leading-relaxed mb-10">Define your token&apos;s economic model. This curve determines the price of your token based on its supply.</p>
           <div className="space-y-6 max-w-md">
             <div className="relative">
               <label className="absolute -top-2 left-3 px-1 bg-[#141118] text-xs text-[#ab9db9]" htmlFor="curve-type">Curve Type</label>
