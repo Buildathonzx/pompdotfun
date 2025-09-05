@@ -14,7 +14,7 @@ import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import TokenRoundedIcon from "@mui/icons-material/TokenRounded";
 import Header from "./Header";
 import ModalsHost from "./ModalsHost";
-import ActionBar from "./ActionBar";
+
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -50,9 +50,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
       <Box component="section" sx={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
         <Header />
-        <ModalsHost />
-        <ActionBar />
-        <ActionBar />
         <Box component="main" sx={{ flex: 1, minWidth: 0 }}>{children}</Box>
 
         <Box component="nav" sx={{ position: "sticky", bottom: 0, zIndex: 10, display: { xs: "flex", md: "none" }, justifyContent: "space-around", alignItems: "center", height: 64, borderTop: "1px solid rgba(255,255,255,0.06)", backdropFilter: "blur(8px)", bgcolor: "rgba(20,17,24,0.75)" }}>
