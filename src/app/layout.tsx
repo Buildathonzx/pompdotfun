@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "../theme";
 
 export const metadata: Metadata = {
   title: "pompdafun",
@@ -25,16 +27,19 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
         />
-        <Script
-          src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
-          strategy="beforeInteractive"
-        />
         <style>{`:root{--primary-color:#8013ec}`}</style>
       </head>
-      <body className="bg-[#141118] text-white min-h-screen" style={{
+      <body style={{
         fontFamily: '"Spline Sans", "Noto Sans", sans-serif',
+        margin: 0,
+        background: '#141118',
+        color: '#fff',
+        minHeight: '100vh',
       }}>
-        {children}
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );}
