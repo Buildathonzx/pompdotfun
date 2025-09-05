@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #7f13ec;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+</head>
+<body class="bg-[#141118] text-white" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#302839] bg-[#141118]/80 px-10 py-4 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tighter">XLayer Meme Token Launchpad</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Home</a>
+<a class="text-[var(--primary-color)]" href="#">Create Token</a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">My Tokens</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[#302839] hover:bg-[var(--primary-color)] transition-colors">
+<span class="material-symbols-outlined"> help </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3gzXS3RFPB4rpLChKV6_hyWHcJItNKZmkhPpDw7QMfIde_lbOlZQuGloyWlu8CVjg4db3V78vzj4qiBeV5kQYtwLCjvWjBrOHBEMtJYimekb8_ogZ1UDATk36pNqIRaEyyWjsNeY9qTSUfJVbY7gbyVn62QlzYPOjeAr0kZDXGrgViD24B-hpI1rRGwogybUiPd0SKN7ASpy8g1fiEZ_d2Um6gX8ST2HpzEBdu7svnJVmrdW14a9ROMyLdhSdzITcEsc1T7qeKyQ");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center items-center py-16 px-4">
+<div class="w-full max-w-2xl mx-auto">
+<div class="glass-effect rounded-2xl p-8 shadow-2xl shadow-black/20 border border-white/10">
+<div class="mb-8">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium text-gray-400">Step 2 of 3</p>
+<p class="text-sm font-bold text-white">66%</p>
+</div>
+<div class="w-full bg-[#302839] rounded-full h-2.5">
+<div class="bg-[var(--primary-color)] h-2.5 rounded-full" style="width: 66%"></div>
+</div>
+</div>
+<h2 class="text-4xl font-bold text-center mb-8 tracking-tighter">Fees &amp; Splits</h2>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="creation-fee">Creation Fee (OKB)</label>
+<input class="form-input w-full rounded-lg text-white bg-[#1c1822] border-2 border-[#302839] focus:border-[var(--primary-color)] focus:ring-0 transition-colors h-12 px-4 placeholder:text-gray-500" id="creation-fee" placeholder="e.g. 0.5" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="platform-fee">Platform %</label>
+<input class="form-input w-full rounded-lg text-white bg-[#1c1822] border-2 border-[#302839] focus:border-[var(--primary-color)] focus:ring-0 transition-colors h-12 px-4 placeholder:text-gray-500" id="platform-fee" placeholder="e.g. 5" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="creator-split">Creator %</label>
+<input class="form-input w-full rounded-lg text-white bg-[#1c1822] border-2 border-[#302839] focus:border-[var(--primary-color)] focus:ring-0 transition-colors h-12 px-4 placeholder:text-gray-500" id="creator-split" placeholder="e.g. 90" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-2" for="referrer-split">Referrer %</label>
+<input class="form-input w-full rounded-lg text-white bg-[#1c1822] border-2 border-[#302839] focus:border-[var(--primary-color)] focus:ring-0 transition-colors h-12 px-4 placeholder:text-gray-500" id="referrer-split" placeholder="e.g. 5" type="number"/>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium text-gray-300">Total Split</p>
+<p class="text-sm font-bold text-white">100%</p>
+</div>
+<div class="w-full bg-[#302839] rounded-full h-2.5">
+<div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-xs text-gray-400 mt-2 text-center">The sum of Platform, Creator, and Referrer percentages must equal 100%.</p>
+</div>
+<div class="mt-10 flex justify-between items-center">
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-[#302839] text-white text-sm font-bold hover:bg-[#473b54] transition-colors">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+                Back
+              </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--primary-color)] text-white text-sm font-bold hover:bg-[#6a0fcc] transition-colors shadow-[0_0_20px_theme(colors.purple.500/0.5)]">
+                Next
+                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
