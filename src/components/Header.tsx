@@ -11,7 +11,7 @@ export default function Header() {
           </svg>
         </div>
         <h2 className="text-white text-xl font-bold leading-tight tracking-[-0.015em]">
-          XLayer Meme Token Launchpad
+          pompdafun
         </h2>
       </div>
       <div className="flex flex-1 justify-end gap-6 items-center">

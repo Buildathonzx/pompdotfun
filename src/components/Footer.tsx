@@ -8,7 +8,7 @@ export default function Footer() {
             <a className="text-white/70 hover:text-white transition-colors text-base" href="#">Privacy Policy</a>
             <a className="text-white/70 hover:text-white transition-colors text-base" href="#">Contact Us</a>
           </div>
-          <p className="text-white/50 text-base">@2024 XLayer Meme Token Launchpad. All rights reserved.</p>
+          <p className="text-white/50 text-base">@2024 pompdafun. All rights reserved.</p>
         </div>
       </div>
     </footer>

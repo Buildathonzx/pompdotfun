@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "XLayer Meme Token Launchpad",
+  title: "pompdafun",
   description:
     "Pump.fun-style Meme Token Launchpad on X Layer (OKX zkEVM)",
 };

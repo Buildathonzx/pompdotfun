@@ -1,4 +1,4 @@
-# TODO: XLayer Meme Token Launchpad SPA (Next.js App Router)
+# TODO: pompdafun SPA (Next.js App Router)
 
 Status legend: [ ] pending, [~] in progress, [x] done
 

@@ -15,7 +15,7 @@ export default function SignPage() {
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-white mb-3">Authenticate Your Wallet</h2>
             <p className="text-gray-400 text-base leading-relaxed mb-8">
-              Please sign the message to securely connect your wallet to the XLayer Meme Token Launchpad.
+              Please sign the message to securely connect your wallet to the pompdafun.
             </p>
             <div className="flex flex-col items-center">
               <button className="w-full h-12 px-6 bg-[var(--primary-color)] rounded-lg text-white text-base font-bold tracking-wider hover:bg-purple-600 transition-colors flex items-center justify-center gap-2">
