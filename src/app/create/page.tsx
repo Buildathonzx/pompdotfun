@@ -1,16 +1,19 @@
 import Link from "next/link";
 import GlassCard from "@/components/GlassCard";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 export default function CreateIndex() {
   return (
-    <div className="px-10 py-12 flex justify-center">
-      <GlassCard className="max-w-xl w-full text-center">
-        <h1 className="text-3xl font-bold mb-2">Create a Token</h1>
-        <p className="text-white/70 mb-6">Start the wizard to launch your meme token.</p>
-        <Link href="/create/metadata" className="inline-flex items-center justify-center rounded-lg bg-[var(--primary-color)] px-6 py-3 font-bold">
-          Start Wizard
-        </Link>
+    <Box sx={{ px: 4, py: 6, display: 'flex', justifyContent: 'center' }}>
+      <GlassCard>
+        <Box sx={{ maxWidth: 560, width: '100%', textAlign: 'center' }}>
+          <Typography variant="h5" sx={{ fontWeight: 700, mb: 1 }}>Create a Token</Typography>
+          <Typography sx={{ color: 'text.secondary', mb: 3 }}>Start the wizard to launch your meme token.</Typography>
+          <Button component={Link} href="/create/metadata" variant="contained" color="primary">Start Wizard</Button>
+        </Box>
       </GlassCard>
-    </div>
+    </Box>
   );
 }

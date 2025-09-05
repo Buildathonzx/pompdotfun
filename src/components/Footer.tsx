@@ -1,16 +1,20 @@
+import Box from "@mui/material/Box";
+import Link from "next/link";
+import Typography from "@mui/material/Typography";
+
 export default function Footer() {
   return (
-    <footer className="flex justify-center border-t border-solid border-b-[#29382f] mt-12">
-      <div className="flex max-w-[960px] flex-1 flex-col">
-        <div className="flex flex-col gap-8 px-5 py-12 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-            <a className="text-white/70 hover:text-white transition-colors text-base" href="#">Terms of Service</a>
-            <a className="text-white/70 hover:text-white transition-colors text-base" href="#">Privacy Policy</a>
-            <a className="text-white/70 hover:text-white transition-colors text-base" href="#">Contact Us</a>
-          </div>
-          <p className="text-white/50 text-base">@2024 pompdafun. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <Box component="footer" sx={{ borderTop: '1px solid rgba(41,56,47,0.08)', mt: 6, display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ maxWidth: 960, width: '100%', display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, px: 2, py: 6, textAlign: 'center' }}>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 2 }}>
+            <Link href="#"><Typography sx={{ color: 'rgba(255,255,255,0.7)' }}>Terms of Service</Typography></Link>
+            <Link href="#"><Typography sx={{ color: 'rgba(255,255,255,0.7)' }}>Privacy Policy</Typography></Link>
+            <Link href="#"><Typography sx={{ color: 'rgba(255,255,255,0.7)' }}>Contact Us</Typography></Link>
+          </Box>
+          <Typography sx={{ color: 'rgba(255,255,255,0.5)' }}>@2024 pompdafun. All rights reserved.</Typography>
+        </Box>
+      </Box>
+    </Box>
   );
 }

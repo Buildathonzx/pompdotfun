@@ -1,40 +1,47 @@
 import Link from "next/link";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import GlassCard from "@/components/GlassCard";
 
 export default function PreviewStep() {
   return (
-    <div className="flex-1 flex justify-center items-center py-12 px-4">
-      <div className="w-full max-w-lg">
-        <div className="glass-effect rounded-2xl p-8 shadow-2xl">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold tracking-tight">Preview &amp; Confirm</h1>
-            <p className="text-gray-400 mt-2">Carefully review your token details before the final launch.</p>
-          </div>
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <p className="text-[#ab9db9] text-sm font-medium">Name</p>
-              <p className="text-white text-sm font-semibold">MemeCoin</p>
-            </div>
-            <div className="flex justify-between items-center">
-              <p className="text-[#ab9db9] text-sm font-medium">Symbol</p>
-              <p className="text-white text-sm font-semibold">MEME</p>
-            </div>
-            <div className="flex justify-between items-center">
-              <p className="text-[#ab9db9] text-sm font-medium">Curve Type</p>
-              <p className="text-white text-sm font-semibold">Linear</p>
-            </div>
-            <div className="flex justify-between items-center border-t border-white/10 pt-6">
-              <p className="text-[#ab9db9] text-sm font-medium">Creation Fee</p>
-              <p className="text-white text-sm font-semibold">0.001 ETH</p>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-white/10">
-            <Link href="/create/launch" className="w-full h-12 px-6 bg-[var(--primary-color)] text-white text-base font-bold rounded-lg hover:bg-purple-700 transition-all flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined">rocket_launch</span>
-              <span>Confirm Launch</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', py: 6, px: 2 }}>
+      <Box sx={{ width: '100%', maxWidth: 720 }}>
+        <GlassCard>
+          <Box sx={{ p: 3 }}>
+            <Box sx={{ textAlign: 'center', mb: 3 }}>
+              <Typography variant="h4" sx={{ fontWeight: 800 }}>Preview & Confirm</Typography>
+              <Typography sx={{ color: 'text.secondary', mt: 1 }}>Carefully review your token details before the final launch.</Typography>
+            </Box>
+
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Typography sx={{ color: 'text.secondary' }}>Name</Typography>
+                <Typography sx={{ fontWeight: 700 }}>MemeCoin</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Typography sx={{ color: 'text.secondary' }}>Symbol</Typography>
+                <Typography sx={{ fontWeight: 700 }}>MEME</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Typography sx={{ color: 'text.secondary' }}>Curve Type</Typography>
+                <Typography sx={{ fontWeight: 700 }}>Linear</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.06)', pt: 2 }}>
+                <Typography sx={{ color: 'text.secondary' }}>Creation Fee</Typography>
+                <Typography sx={{ fontWeight: 700 }}>0.001 ETH</Typography>
+              </Box>
+            </Box>
+
+            <Box sx={{ mt: 3, pt: 2, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+              <Button component={Link} href="/create/launch" variant="contained" color="primary" fullWidth startIcon={<span className="material-symbols-outlined">rocket_launch</span>}>
+                Confirm Launch
+              </Button>
+            </Box>
+          </Box>
+        </GlassCard>
+      </Box>
+    </Box>
   );
 }
